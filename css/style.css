@@ -1,0 +1,998 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a,a:hover{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat",sans-serif;
+    color: #333;
+    line-height: 1.4;
+    font-weight: 600;
+}
+body{
+    font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.parallex{
+    background-image: url(../images/bg1.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+}
+.parallex::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    background-color: rgba(28, 44, 87, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.parallex1{
+    background-image: url(../images/bg1.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.parallex1::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    background-color: rgba(28, 44, 87, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 0; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #00aeef; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px 0 0 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition: 0.5s all ease-in-out;
+}
+  
+#myBtn:hover {
+    background-color: black; /* Add a dark-grey background on hover */
+}
+
+/* header */
+header.sticky-top.header1{
+    top: -53px;
+}
+.sticky-top{
+    transition: 0.2s all ease-in-out;
+    box-shadow: 0px 7px 30px -23px rgba(0,0,0,0.8);
+}
+
+/* top-header */
+header .top-header{
+    background-color: #f4f4f4;
+}
+header .top-header a{
+    font-size: 12px;
+    color: #707070;
+}
+header .top-header .address i{
+    color: #00aeef;
+}
+header .top-header .email i{
+    color: #00aeef;
+}
+header .top-header .icons a{
+    color: #707070;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: 0.5s ease-in-out;
+}
+header .top-header .icons a:hover{
+    color: #00aeef;
+}
+
+/* main-header */
+.dropdown-menu{padding:0;margin:0;border:0 solid transition!important;border:0 solid rgba(0,0,0,.15);border-radius:0;-webkit-box-shadow:none!important;box-shadow:none!important}
+.dropdown-menu .dropdown-menu{left:100% !important;}
+.mainmenu a, .navbar-default .navbar-nav > li > a, .mainmenu ul li a , .navbar-expand-lg .navbar-nav .nav-link{color:rgb(0, 0, 0);font-size:16px;text-transform:uppercase;padding:16px 15px;font-family:'Roboto',sans-serif;display: block !important;}
+/*==========Sub Menu=v==========*/
+.mainmenu .collapse ul > li:hover > a{color: #00aeef;}
+.mainmenu .collapse ul ul > li:hover > a, .navbar-default .navbar-nav .show .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .show .dropdown-menu > li > a:hover{color: #00aeef;}
+.mainmenu .collapse ul ul{box-shadow: 0 1px 5px rgb(0 0 0 / 10%) !important;}
+.navbar-light .navbar-toggler {border-color: transparent;}
+.navbar button:focus{outline: none;}
+ul.navbar-nav.mr-auto{align-items: center;}
+header .main-header{
+    background-color: white;
+}
+header .main-header .row .navbar a{order: -2;}
+header .main-header .row .booking-btn{
+    order: -1;
+    background-color: #00aeef;
+    color: white;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 2px solid #00aeef;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+}
+header .main-header .row .book-btn{
+    order: -1;
+    background-color: #00aeef;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 6px 0;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #00aeef;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    display: none !important;
+}
+header .main-header .row .booking-btn:hover{
+    background-color: white;
+    color: #00aeef;
+    border: 2px solid #00aeef;
+}
+header .main-header .row .navbar-nav li a{
+    font-size: 14px;
+    color: #333;
+    transition: 0.5s ease-in-out;
+}
+header .main-header .row .navbar-nav li a:hover{
+    color: #00aeef;
+}
+header .main-header .row .navbar-nav li li a:hover{
+    color: #00aeef;
+}
+.navbar-expand-lg .navbar-collapse{
+    flex-grow: 0;
+}
+header .main-header .row .navbar-nav .dropdown-menu li a {
+    padding: 12px;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid rgba(242, 244, 248, 0.7);
+}
+
+
+/******************************Drop-down menu work on hover**********************************/
+.mainmenu{background: none;border: 0 solid;margin: 0;padding: 0;min-height:20px;width: 100%;}
+
+
+/* section */
+
+/* sectionbox1 */
+section .sectionbox1 .row{
+    padding: 100px 0;
+}
+section .sectionbox1 .row h2{
+    font-weight: bold;
+    font-size: 60px;
+}
+section .sectionbox1 .row p{
+    font-size: 23px;
+}
+section .sectionbox1 .row .buttons .btn1{
+    background-color: #00aeef;
+    color: white;
+    width: 170px;
+    height: 46px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 2px solid #00aeef;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 30px;
+}
+section .sectionbox1 .row .buttons .btn1:hover{
+    background-color: transparent;
+    color: #00aeef;
+    border: 2px solid #00aeef;
+}
+section .sectionbox1 .row .buttons .btn2{
+    color: #00aeef;
+    width: 170px;
+    height: 46px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 2px solid #00aeef;
+    margin-bottom: 30px;
+}
+
+/* sectionb0x2 */
+section .sectionbox2{
+    padding-top: 100px;
+}
+section .sectionbox2 .row{
+    border-bottom: 2px solid #f4f4f4;
+}
+section .sectionbox2 .row .img img{
+    width: 100%;
+    margin-bottom: 50px;
+}
+section .sectionbox2 .row .content .heading{
+    margin-bottom: 50px;
+}
+section .sectionbox2 .row .content .heading h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+section .sectionbox2 .row .content .heading .line{
+    width: 70px;
+    height: 4px;
+    background-color: #00aeef;
+}
+section .sectionbox2 .row .content p{
+    line-height: 1.9;
+    color: #707070;
+    font-size: 16px;
+}
+section .sectionbox2 .row .content .bars .title span{
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+section .sectionbox2 .row .content .bars .barbg{
+    width: 100%;
+    height: 10px;
+    background-color: #f4f4f4;
+}
+section .sectionbox2 .row .content .bars .bar1 .bar-inner{
+    background-color: #00aeef;
+    width: 80%;
+    height: 10px;
+}
+section .sectionbox2 .row .content .bars .bar2 .bar-inner{
+    background-color: #00aeef;
+    width: 65%;
+    height: 10px;
+}
+section .sectionbox2 .row .content .bars .bar3 .bar-inner{
+    background-color: #00aeef;
+    width: 85%;
+    height: 10px;
+}
+
+/* sectionbox3 */
+section .sectionbox3 .row .part1{
+    margin: 50px;
+}
+section .sectionbox3 .row .part1 i{
+    font-size: 50px;
+    color: #00aeef;
+}
+section .sectionbox3 .row .part1 h2{
+    font-size: 38px;
+    margin: 15px;
+}
+
+/* sectionbox4 */
+section .sectionbox4 .row{
+    padding: 50px 0;
+}
+section .sectionbox4 .row .content .title{
+    margin-bottom: 50px;
+}
+section .sectionbox4 .row .content .title h2{
+    font-size: 36px;
+    color: white;
+}
+section .sectionbox4 .row .content .title .line{
+    width: 70px;
+    height: 4px;
+    background-color: #00aeef;
+}
+section .sectionbox4 .row .content .part1 h6{
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+section .sectionbox4 .row .content .part1 h6:hover{
+    color: #00aeef;
+}
+section .sectionbox4 .row .video img{
+    width: 100%;
+    position: relative;
+}
+section .sectionbox4 .row .video i{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -30px;
+    top: 50%;
+    left: 50%;
+    font-size: 60px;
+    color: #00aeef;
+    transition: 0.5s ease-in-out;
+}
+section .sectionbox4 .row .video i:hover{
+    color: black;
+}
+
+/* sectionbox5 */
+section .sectionbox5{
+    padding: 60px 0;
+}
+section .sectionbox5 .row .title{
+    margin-bottom: 50px;
+}
+section .sectionbox5 .row .title .line{
+    width: 70px;
+    height: 4px;
+    background-color: #00aeef;
+    margin: 0 auto;
+}
+section .sectionbox5 .row .table thead tr th{
+    background-color: #00aeef;
+    color: white;
+}
+section .sectionbox5 .row .table tr th,section .sectionbox5 .row .table tr td{
+    padding: 15px 30px;
+    border-radius: 3px;
+    border: 4px solid #fff;
+    background-color: #f4f4f4;
+    color: #707070;
+}
+section .sectionbox5 .row a .btn{
+    margin-top: 50px;
+    background-color: #00aeef;
+    color: white;
+    height: 46px;
+    width: 170px;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 2px solid #00aeef;
+    transition: 0.5s ease-in-out;
+}
+section .sectionbox5 .row a .btn:hover{
+    background-color: white;
+    color: #00aeef;
+    border: 2px solid #00aeef;
+}
+
+/* sectionbox6 */
+section .sectionbox6 .container{
+    padding: 80px 0;
+}
+section .sectionbox6 .row .title{
+    margin-bottom: 50px;
+}
+section .sectionbox6 .row .title h2{
+    font-size: 36px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: white;
+}
+section .sectionbox6 .row .title .line{
+    width: 70px;
+    height: 4px;
+    background-color: #00aeef;
+    margin: 0 auto;
+}
+section .sectionbox6 .row form .form-control{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0 30px;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+section .sectionbox6 .row form select{
+    appearance: none;
+}
+section .sectionbox6 .row form textarea.form-control{
+    padding: 30px;
+    height: 120px;
+}
+section .sectionbox6 .row a .btn{
+    background-color: #00aeef;
+    color: white;
+    height: 46px;
+    width: 170px;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 2px solid #00aeef;
+    transition: 0.5s ease-in-out;
+}
+section .sectionbox6 .row a .btn:hover{
+    background-color: transparent;
+    color: #00aeef;
+    border: 2px solid #00aeef;
+}
+
+/* sectionbox7 */
+section .sectionbox7{
+    padding: 100px 0;
+}
+section .sectionbox7 .row .title{
+    margin-bottom: 50px;
+}
+section .sectionbox7 .row .title .line{
+    width: 70px;
+    height: 4px;
+    background-color: #00aeef;
+    margin: 0 auto;
+}
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: #00aeef;
+}
+section .sectionbox7 .row .owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+section .sectionbox7 .row .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+section .sectionbox7 .row .owl-carousel .owl-nav button:focus{
+    outline: 0;
+}
+section .sectionbox7 .row .owl-carousel .owl-nav button span{
+    font-size: 40px;
+    margin: 0 10px;
+}
+.owl-theme .owl-dots .owl-dot span{
+    width: 40px;
+    height: 3px;
+    border-radius: 0;
+    background: #D6D6D6;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background: #00aeef;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots button:focus{
+    outline: 0;
+}
+section .sectionbox7 .row img{
+    width: 100%;
+}
+section .sectionbox7 .row .part1{
+    position: relative;
+    background-color: #f4f4f4;
+    margin-bottom: 50px;
+}
+section .sectionbox7 .row .part1 .content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    height: 25%;
+    background-color: rgba(28, 44, 87, 0.7);
+}
+section .sectionbox7 .row .part1:hover .content{
+    height: 100%;
+    background-color: rgba(28, 44, 87, 0.7);
+    bottom: 0;
+}
+section .sectionbox7 .row .part1:hover .content .info{
+    background-color: transparent;
+}
+section .sectionbox7 .row .part1 .content .info{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    transition: 0.5s all ease-in-out;
+}
+section .sectionbox7 .row .part1 .content .icons a{
+    color: #00aeef;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 7px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+section .sectionbox7 .row .part1 .content .icons a:hover{
+    background-color: #00aeef;
+    color: white;
+}
+section .sectionbox7 .row .part1:hover .content .icons a{
+    opacity: 1;    
+}
+
+
+/* sectionbox8 */
+section .sectionbox8 .row{
+    padding: 80px 0;
+}
+section .sectionbox8 .row .item img{
+    width: 50%;
+    height: 50%;
+}
+section .sectionbox8 .row .item .content h5{
+    font-size: 16px;
+}
+
+/* sectionbox9 */
+section .sectionbox9 .row{
+    padding-top: 50px;
+}
+section .sectionbox9 .row .title .line{
+    width: 70px;
+    height: 4px;
+    background-color: #00aeef;
+}
+section .sectionbox9 .row .part1{
+    box-shadow: 0px 0px 30px -13px rgba(0,0,0,0.75);
+    margin-bottom: 50px;
+}
+section .sectionbox9 .row .part1 img{
+    width: 100%;
+}
+section .sectionbox9 .row .part1 .content{
+    padding: 30px;
+    background-color: #ffffff;
+}
+section .sectionbox9 .row .part1 .content h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: 0.5s all ease-in-out;
+}
+section .sectionbox9 .row .part1 .content h2:hover{
+    color: #00aeef;
+}
+section .sectionbox9 .row .part1 .content p{
+    line-height: 1.9;
+    color: #707070;
+    font-size: 14px;
+    line-height: 1.9;
+}
+section .sectionbox9 .row .part1 .content .tagline a{
+    color: #b7b7b7;
+    margin-right: 15px;
+    transition: 0.5s all ease-in-out;
+}
+section .sectionbox9 .row .part1 .content .tagline a:hover{
+    color: #00aeef;
+}
+section .sectionbox9 .row .part1 .content .tagline a i{
+    color: #00aeef;
+}
+
+
+/* footer */
+footer{
+    padding-top: 50px;
+}
+footer .row .part1 p{
+    color: white;
+    line-height: 1.9;
+    font-size: 14px;
+}
+footer .row .part1 .contact p{
+    margin-bottom: 5px;
+}
+footer .row .part1 .contact{
+    margin-bottom: 12px;
+}
+footer .row .part1 .contact p i{
+    margin-right: 5px;
+    color: #00aeef;
+}
+footer .row .title h5{
+    color: #ffffff;
+    margin-bottom: 25px;
+    display: block;
+}
+footer .row ul li{
+    list-style: none;
+}
+footer .row .part2 ul li{
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+footer .row .part3 ul li{
+    width: 50%;
+}
+footer .row .part3 ul li a{
+    color: #ffffff;
+    margin-bottom: 17px;
+    display: block;
+    transition: 0.5s ease-in-out;
+}
+footer .row .part3 ul li a:hover{
+    color: #00aeef;
+}
+footer .row .part4 p{
+    color: white;
+    line-height: 1.9;
+    font-size: 14px;
+}
+footer .row .part4 form input{
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: none;
+    font-size: 12px;
+    padding: 0 15px;
+}
+footer .row .part4 form button{
+    position: absolute;
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 0 2px 2px 0;
+    border: none;
+    background-color: #00aeef;
+    color: white;
+    cursor: pointer;
+    right: 15px;
+    transition: 0.5s ease-in-out;
+}
+footer .row .part4 form button:hover{
+    background-color: black;
+}
+footer .row .part4 .icons a{
+    color: white;
+    font-size: 14px;
+    margin-right: 20px;
+    transition: 0.5s ease-in-out;
+}
+footer .row .part4 .icons a:hover{
+    color: #00aeef;
+}
+footer .row .footerbox{
+    border-top: 1px solid #576a7d;
+    padding-top: 20px;
+    text-align: center;
+}
+footer .row .footerbox p{
+    font-size: 12px;
+    color: #b7b7b7;
+}
+
+
+
+@media (max-width: 1280px){
+    section .sectionbox5{
+        padding: 60px 0;
+    }
+    section .sectionbox5 .row .title{
+        margin-bottom: 30px;
+    }
+    section .sectionbox5 .row a .btn{
+        margin-top: 20px;
+    }
+    section .sectionbox6 .container{
+        padding: 60px 0;
+    }
+    section .sectionbox7{
+        padding: 50px 0;
+    }
+    section .sectionbox7 .row .part1{
+        margin-bottom: 30px;
+    }
+    section .sectionbox9 .row .part1{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .mainmenu .collapse ul li:hover> ul    {left: 0 !important; top: 100%;}
+    .navbar-collapse{
+        position: fixed;
+        top: 0;
+        width: 500px;
+        left: -500px;
+        background-color: white;
+        height: 100vh;
+        transition: 0.5s ease-in-out;
+        padding-top: 100px;
+        z-index: 5;
+    }
+    .collapse.show{
+        left: 0;
+    }
+    .navbar-nav{
+        height: 100vh;
+        overflow: scroll;
+        background-color: #f2f4f8;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    section .sectionbox3 .row{
+        padding: 30px 0;
+    }
+    section .sectionbox3 .row .part1{
+        margin: 30px;
+    }
+    section .sectionbox4 .row{
+        padding: 30px 0;
+    }
+    section .sectionbox4 .row .content .title{
+        margin-top: 0 !important;
+    }
+    section .sectionbox5{
+        padding: 30px 0;
+    }
+    section .sectionbox6 .container{
+        padding: 30px 0;
+    }
+    section .sectionbox7{
+        padding-top: 40px;
+    }
+    section .sectionbox8 .row{
+        padding: 50px 0;
+    }
+    section .sectionbox9 .row{
+        padding-top: 40px;
+    }
+    footer .row .part1, footer .row .part2{
+        border-bottom: 1px solid #707070;
+        margin-bottom: 10px;
+    }
+    footer .row .part2{
+        padding-bottom: 11px;
+    }
+    footer .row .part3 ul{
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+.mainmenu .collapse ul li:hover> ul{display:block;width: 180px;}
+.mainmenu .collapse ul ul{position:absolute;top:100%;left:0;min-width:100%;display:none}
+/*******/
+.mainmenu .collapse ul ul li{position:relative}
+.mainmenu .collapse ul ul li:hover> ul{display:block;width: 180px;}
+.mainmenu .collapse ul ul ul{position:absolute;top:0;left:0;min-width:100%;display:none}
+/*******/
+.mainmenu .collapse ul ul ul li{position:relative}
+.mainmenu .collapse ul ul ul li:hover ul{display:block;width: 180px;}
+.mainmenu .collapse ul ul ul ul{position:absolute;top:0;left:0;min-width:100%;display:none;z-index:1}
+
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav .show .dropdown-menu .dropdown-menu > li > a{padding:16px 15px 16px 35px}
+    .navbar-nav .show .dropdown-menu .dropdown-menu .dropdown-menu > li > a{padding:16px 15px 16px 45px}
+    .top-header .address span,.top-header .email span {display: none;}
+    .navbar-collapse{
+        position: fixed;
+        top: 0;
+        width: 250px;
+        left: -250px;
+        background-color: white;
+        height: 100vh;
+        transition: 0.5s ease-in-out;
+        overflow: auto;
+    }
+    .collapse.show{
+        left: 0;
+    }
+    .navbar-nav{
+        height: 100vh;
+        overflow: scroll;
+        background-color: #f2f4f8;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    section .sectionbox5 .row .table tr th,section .sectionbox5 .row .table tr td{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    #myBtn{
+        display: none !important;
+    }
+    .container{
+        max-width: 700px;
+    }
+    header .main-header .row .navbar a img{
+        width: 160px;
+        margin-left: 15px;
+    }
+    .mainmenu a{
+        padding: 0;
+    }
+    header .main-header .row .booking-btn{
+        display: none!important;
+    }
+    header .main-header .row .book-btn{
+        display:inline-block!important;
+    }
+    section .sectionbox1 .row h2{
+        font-size: 36px;
+    }
+    section .sectionbox1 .row p{
+        font-size: 15px;
+    }
+    section .sectionbox1 .row .buttons .btn{
+        width: 140px;
+        height: 40px;
+        padding: 8px 20px;
+    }
+    section .sectionbox1 .row {
+        padding: 40px 0;
+    }
+    section .sectionbox2 .row .content .heading h2 {
+        font-size: 26px;
+        margin: 10px 0;
+    }
+    section .sectionbox2 .row .content .heading {
+        margin-bottom: 30px;
+    }
+    section .sectionbox2 {
+        padding-top: 0;
+    }
+    section .sectionbox2 .row .img img{
+        margin: 10px 0;
+    }
+    section .sectionbox3 .row .part1 h2 {
+        font-size: 25px;
+        margin: 5px;
+    }
+    section .sectionbox3 .row .part1 h5{
+        font-size: 16px;
+    }
+    section .sectionbox3 .row {
+        padding: 0;
+    }
+    section .sectionbox3 .row .part1 i{
+        font-size: 40px;
+    }
+    section .sectionbox4 .row .content .title h2 {
+        margin-bottom: 10px !important;
+        font-size: 26px;
+    }
+    section .sectionbox4 .row .content .title {
+        margin: 0 !important;
+    }
+    section .sectionbox4 .row .content .part1{
+        margin: 10px 0 !important;
+    }
+    section .sectionbox4 .row .video{
+        margin-top: 10px;
+    }
+    section .sectionbox5 .row .title h2{
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    section .sectionbox5 .row a .btn{
+        margin-top: 0;
+    }
+    section .sectionbox5 .row a .btn{
+        width: 140px;
+        height: 40px;
+        padding: 8px 20px;
+    }
+    section .sectionbox6 .row .title h2{
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    section .sectionbox6 .container{
+        padding: 20px;
+    }
+    section .sectionbox6 .row .title{
+        margin-bottom: 30px;
+    }
+    section .sectionbox6 .row form .form-control{
+        margin-bottom: 12px;
+    }
+    section .sectionbox6 .row a .btn{
+        width: 140px;
+        height: 40px;
+        padding: 8px 20px;
+        margin-top: 5px;
+    }
+    section .sectionbox7 .row .title h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    section .sectionbox7 {
+        padding: 30px 0;
+    }
+    section .sectionbox9 .row .title h2 {
+        font-size: 26px;
+        margin-bottom: 10px !important;
+    }
+    section .sectionbox9 .row{
+        padding-top: 30px;
+    }
+    section .sectionbox9 .row .part1 .content{
+        padding: 10px;
+    }
+    section .sectionbox9 .row .part1 .content h2{
+        font-size: 20px;
+    }
+    section .sectionbox9 .row .part1 .content p{
+        font-size: 16px;
+    }
+    section .sectionbox9 .row .part1 .content .tagline a{
+        font-size: 14px;
+    }
+    footer{
+        padding-top: 30px;
+    }
+}
+@media only screen and (min-width: 992px){
+    header .main-header .row .navbar .booking-btn{order: 3;}
+}
+@media (max-width: 380px){
+
+    header .main-header a img{width: 100px;}
+
+    section .sectionbox1 .row h2{
+        font-size: 40px;
+    }
+    section .sectionbox8 .row div{
+        flex-direction: column;
+    }
+    section .sectionbox8 .row div img{
+        margin-bottom: 100px;
+    }
+}
+@media (max-width: 475px){
+
+    header .main-header a img{width: 100px;}
+
+    section .sectionbox1 .row h2{
+        font-size: 26px;
+    }
+    section .sectionbox8 .row{
+        padding: 30px 0;
+    }
+    section .sectionbox8 .row div{
+        flex-direction: column;
+        align-items: center;
+    }
+    section .sectionbox8 .row div img{
+        margin-bottom: 20px;
+    }
+    footer .row .part4{
+        margin-bottom: 10px;
+    }
+    footer .row .part1, footer .row .part2, footer .row .part3{
+        border-bottom: 1px solid #707070;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+}
+

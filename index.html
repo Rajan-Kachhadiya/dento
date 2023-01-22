@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dento - Dentist &amp; Medical HTML Template</title>
+
+    <link rel="icon" href="images/xfavicon.ico.pagespeed.ic.QZ5TBD1axA.webp">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.js"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="far fa-arrow-to-top"></i></button>
+
+    <header class="sticky-top">
+
+        <div class="top-header">
+            <div class="container">
+                <div class="row p-3">
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-6 d-flex left">
+                        <div class="address mr-4">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom"
+                                title="28 Jackson Street, Chicago, 7788569 USA">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>28 Jackson Street, Chicago, 7788569 USA</span>
+                            </a>
+                        </div>
+                        <div class="email">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="info.dento@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                <span>info.dento@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-right icons">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i
+                                class="fab fa-google-plus-g"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
+                                class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div id="menu_area" class="menu-area">
+                <div class="container">
+                    <div class="row py-2">
+
+                        <nav class="navbar navbar-light navbar-expand-lg mainmenu justify-content-between">
+
+                            <a href="#">
+                                <img src="data:image/webp;base64,UklGRiAFAABXRUJQVlA4TBMFAAAvl8AJEFpRkLYB0/m3fSVExAQA8h/ZkSQpkqW/MKFKCnU33b371nq/8zEzHtbDfMzME3Ndd0gMABBu0na2bdu2rZdt27Zt27Zt27Zt7xy4jaRIycLx5bjvC3AcwG0j/f8z/KRIitQLplG1l6NDpc7V5WBgACH6bhCSFIYUUkghhRRSSCGFFF4hhRRSSCEGbhspyjGnWro3eKSCKBEVrnrVifpVgPpTl2pYxSsZBbPTtC1USMrnS/VU15cUlreDCqSM1U2NVK/K+dCzi0hIa4WqmnZfG1WqrJW0olVkilXJK7df6m1xQI0oPM8tkqKJFZFaU0CpbqWgwJ0UhahM1HpV1RdF5ZlFKkxFkMJUO6W2lMTws6cs1GNVqYtvnlfExwlEO1QDpQoVwgpBilhNVZVaU4ieVYTBGVS28lKAClgtScGq5qpSmZ5VjMJBKwr1qWJWbXql+nYWxe05RVb8RUmrQtX5duUqha6Oqj56TrET987+Ubd/bBtxUBkVkGCRglDIjWoogpAmS4lXlWL1jCIvAuhn5aI8bBud8SMJrmEyOqIvNuETAgkuI3ETpqqrVNw4VkremSTFXRt/kgYgTFLG8ZokRXGSAT8AEr1IyI7TSGJJkMeqVsHbPp+RONSEKeYqtbsWpNxMwqMJw/N4UDsIj6/4fvuVCrNtrBgSpPRSNaiAUgTrQQqScOQRerAmjicq5YYVg+K0bVwdg6peqmyrlPRKfCqD8abmio2dLBRxsUZOAdrlMgGMBzNjTLDGin8xFeDWGNRpcq9XKXN3DCQXI8mZRPYmyaVUQiVka9IO7A9mePlDgq1jUKj9HVRvpRzd00/uzEsSXnKcxVsVpTP/Ak9yoelAu+GKzwjbFqqVdUG5uCd4W9Q9CZTucGXLxRO/g4XtrzP+DOj02Gp45SP+pic4dnVPhoVcbjxZpdcTbGw7sG7En06g6i8l475Ocr806o+9OalVjVg+49xU+lYAT6XCJbjcdqD8YO3k2GqhFAEibhbVoB5CVKxrMfA1e4jQdNyuPhjYC1RXatfItWFuflUNa7vCzeR6G4IzfVC9N/0p4K5Rb6Mnm4jcM6fpnlbVrWNzglltyLkk+IceSIOCOJUk+50+pVWK2Rh6Aq6WRN8zWj1WCvVE7wTvEaELZtpGHPwcoOpVp5EVA9b+3vxFFqi/gUy/yXq/iXxJ0LILKto2DvdROOpLcRmLUMgd/eROnJkHDwlw+ONM13YIwvMET/8vU7A3CTLaNhYmQVk3qniV4j08R4g71pLPC1WyBnwuZNNx2RiRBIOXXViVBNlakLOJVRRqWsEbezB63TnmCNp81lLvIews7QjbxUiEv8ke8iyyMDwJcts2NiRB1GWqglLVitQX9pBizblvRxZbM8IE//tsTE+CR4hn26iRBCWbNzgeNqHKRlH5DX5iRu+UQPIxgVZAECX6n2zExsckOLtvG6najxlOJVizjFLcCtfIiDf4gDieU9RKElzaPfg9QRnbxr6k+QJXIP//GtT1rGJuklz8aaNTggS2jUn5iihNExrie7DA8/7Rx54kwT9MfP0EA9BhEYJkmIkCXgZgY/Ljo+cVEbA3SYK36IVYgxykwCT8SLD/nWf2I+YkSYJfWHftsBlqkA0dcAD/k2AxwnhyUR/v04hPuIzdz3EIN/Fz2YDGnl/Ewyz8zdA9LEB8bwWRAuOe9Q/hDSYgpbeGT1AYg7AV9/4m+IFb2HYOxRDiqQUA"
+                                    alt="logo">
+                            </a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li><a href="#">Home</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a href="#">- Home</a></li>
+                                            <li><a href="#">- About Us</a></li>
+                                            <li><a href="#">- Service</a></li>
+                                            <li><a href="#">- Pricing</a></li>
+                                            <li><a href="#">- Blog</a></li>
+                                            <li><a href="#">- Blog Details</a></li>
+                                            <li><a href="#">- Contact</a></li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-
+                                                    Dropdown</a>
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <li><a href="#">- Dropdown Item</a></li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="navbarDropdown"
+                                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">- Dropdown Item</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                            <li><a href="#">- Even Dropdown</a></li>
+                                                            <li><a href="#">- Even Dropdown</a></li>
+                                                            <li><a href="#">- Even Dropdown</a></li>
+                                                            <li><a href="#">- Even Dropdown</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">- Dropdown Item</a></li>
+                                                    <li><a href="#">- Dropdown Item</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Service</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a href="#">- Blog</a></li>
+                                            <li><a href="#">- Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+
+                            </div>
+                            <a href="#" class="booking-btn">BOOKING NOW</a>
+                            <a href="#" class="book-btn">BOOK NOW</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="sectionbox1">
+            <div class="parallex d-flex align-items-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <h2 class="text-white text-center py-3">We Believe Everyone Should Have Easy Access To Great
+                                Dental
+                                Care</h2>
+                            <p class="text-white text-center py-3">As a leading industry innovator, Dento is opening up
+                                exciting new
+                                opportunities for dental professionals, investors, employees & suppliers. Contact us to
+                                find
+                                out what we have to
+                                offer you.</p>
+                            <div class="buttons text-center">
+                                <a href="javascript: void(0);" class="btn btn1 btn-sm mx-2">GET STARTED</a>
+                                <a href="javascript: void(0);" class="btn btn2 btn-sm mx-2">CONTACT US</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionbox2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="img" data-aos="zoom-in-down">
+                            <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x15.jpg.pagespeed.ic.yQ4Z2Twlda.webp"
+                                alt="img">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="content">
+                            <div class="heading">
+                                <h2>About Us</h2>
+                                <div class="line"></div>
+                            </div>
+                            <p class="mb-4">Vestibulum condimentum, risus sedones honcus rutrum, salah lacus mollis
+                                zurna, nec finibusmi velit advertisis. Proin vitae odin quis magna aliquet laciniae.
+                                Etiam auctor, nisi vel. Pellentesque ultrices nisl quam iaculis, nec pulvinar
+                                augue.
+                            </p>
+                            <div class="bars">
+                                <div class="title my-lg-3 my-1 d-flex justify-content-between">
+                                    <span>Experience Dentist</span><span>80%</span>
+                                </div>
+                                <div class="barbg bar1 mb-lg-4 mb-3">
+                                    <div class="bar-inner"></div>
+                                </div>
+                                <div class="title my-lg-3 my-1 d-flex justify-content-between">
+                                    <span>Modern Equipment</span><span>65%</span>
+                                </div>
+                                <div class="barbg bar2 mb-lg-4 mb-3">
+                                    <div class="bar-inner"></div>
+                                </div>
+                                <div class="title my-lg-3 my-1 d-flex justify-content-between">
+                                    <span>Friendly Staff</span><span>85%</span>
+                                </div>
+                                <div class="barbg bar3 mb-4">
+                                    <div class="bar-inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionbox3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-3 col-6">
+                        <div class="part1 text-center">
+                            <i class="fab fa-react"></i>
+                            <h2 id="counter"><span class="counter-value" data-count="20">0</span></h2>
+                            <h5>Years Of Experience</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 col-6">
+                        <div class="part1 text-center">
+                            <i class="fal fa-heart"></i>
+                            <h2 id="counter"><span class="counter-value" data-count="700">0</span>+</h2>
+                            <h5>Happy Patients</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 col-6">
+                        <div class="part1 text-center">
+                            <i class="fal fa-book"></i>
+                            <h2 id="counter"><span class="counter-value" data-count="120">0</span></h2>
+                            <h5>Certificate</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 col-6">
+                        <div class="part1 text-center">
+                            <i class="fal fa-id-card"></i>
+                            <h2 id="counter"><span class="counter-value" data-count="40">0</span>+</h2>
+                            <h5>Dentist</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sectionbox4">
+            <div class="parallex d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 col-12">
+                            <div class="content">
+                                <div class="title my-4">
+                                    <h2 class="mb-4">Our Services</h2>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="row p-0">
+                                    <div class="col-sm-4 col-6">
+                                        <div class="part1 my-4">
+                                            <img class="my-4"
+                                                src="https://preview.colorlib.com/theme/dento/img/core-img/xs1.png.pagespeed.ic.yJFP_XuRzp.webp"
+                                                alt="teeth">
+                                            <h6>Teeth Whitening</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="part1 my-4">
+                                            <img class="my-4"
+                                                src="https://preview.colorlib.com/theme/dento/img/core-img/xs2.png.pagespeed.ic.qxLWPyGS6F.webp"
+                                                alt="teeth">
+                                            <h6>Missing Teeth</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="part1 my-4">
+                                            <img class="my-4"
+                                                src="https://preview.colorlib.com/theme/dento/img/core-img/xs3.png.pagespeed.ic.YBnRDFC0J2.webp"
+                                                alt="teeth">
+                                            <h6>Cosmetic Dentistry</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="part1 my-4">
+                                            <img class="my-4"
+                                                src="https://preview.colorlib.com/theme/dento/img/core-img/xs4.png.pagespeed.ic.HDRdvqacdy.webp"
+                                                alt="teeth">
+                                            <h6>Examination</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="part1 my-4">
+                                            <img class="my-4"
+                                                src="https://preview.colorlib.com/theme/dento/img/core-img/xs5.png.pagespeed.ic.uaUnENJyr9.webp"
+                                                alt="teeth">
+                                            <h6>Teeth Pain</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="part1 my-4">
+                                            <img class="my-4"
+                                                src="https://preview.colorlib.com/theme/dento/img/core-img/xs1.png.pagespeed.ic.yJFP_XuRzp.webp"
+                                                alt="teeth">
+                                            <h6>Teeth Whitening</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="video d-flex justify-content-center">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x14.jpg.pagespeed.ic.CIui8Uancw.webp"
+                                    alt="video">
+                                <a href="#"><i class="fas fa-play-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionbox5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title text-center">
+                            <h2>Pricing</h2>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-borderless table-fluid">
+                            <thead>
+                                <tr>
+                                    <th>Service Names</th>
+                                    <th>Stage</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Teeth Whitening Service at home</td>
+                                    <td>1 times</td>
+                                    <td>$115.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Teeth Whitening Service at Dental Clinic</td>
+                                    <td>1 times</td>
+                                    <td>$100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceramic crowns and fillings Dental porcelain</td>
+                                    <td>1 times</td>
+                                    <td>$99.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Remove crowns, bridges Service</td>
+                                    <td>1 tooth</td>
+                                    <td>$50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Covering tde recession of tde gums</td>
+                                    <td>1 times</td>
+                                    <td>$400.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Consultation, impressions and preparation of models</td>
+                                    <td>1 times</td>
+                                    <td>$35.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Removal of an old inlay, old crown</td>
+                                    <td>1 times</td>
+                                    <td>$99.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Overlay teeth whitening ( 2 arches)</td>
+                                    <td>1 times</td>
+                                    <td>$170.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Standard porcelain and zirconium crown on implant</td>
+                                    <td>1 tooth</td>
+                                    <td>$499.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Implantation of an implant (price depends on system used)</td>
+                                    <td>1 tooth</td>
+                                    <td>$600.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a href="#">
+                            <div class="btn">
+                                Read More <i class="fa fa-angle-double-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionbox6">
+            <div class="parallex d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="title text-center">
+                                <h2>Book An Apointment</h2>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Your Name" class="form-control" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Your Phone" class="form-control" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" placeholder="Your Email" class="form-control" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Your address" class="form-control">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="form-control">
+                                            <option value="Choose Your Scheldule">Choose Your Scheldule</option>
+                                            <option value="9 AM to 10 AM">9 AM to 10 AM</option>
+                                            <option value="11 AM to 12 PM">11 AM to 12 PM</option>
+                                            <option value="2 PM to 4 PM">2 PM to 4 PM</option>
+                                            <option value="8 PM to 10 PM">8 PM to 10 PM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select class="form-control">
+                                            <option value="Choose Your Scheldule">Choose Your Scheldule</option>
+                                            <option value="9 AM to 10 AM">9 AM to 10 AM</option>
+                                            <option value="11 AM to 12 PM">11 AM to 12 PM</option>
+                                            <option value="2 PM to 4 PM">2 PM to 4 PM</option>
+                                            <option value="8 PM to 10 PM">8 PM to 10 PM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <textarea placeholder="Your Message" class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <a href="#">
+                                            <div class="btn">
+                                                Booking Now
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionbox7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="title">
+                            <h2>Our Dentist</h2>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-12">
+                        <div class="our_dentist_slider owl-carousel owl-theme">
+                            <div class="part1">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x9.png.pagespeed.ic.A5OdBpmZhq.webp"
+                                    alt="img">
+                                <div class="content d-flex justify-content-center text-center flex-column">
+                                    <div class="icons">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="text-white">Michael Barley</h5>
+                                        <p class="m-0 text-white">Implant Expert</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div class="part1">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x10.png.pagespeed.ic.Evdko4uIO3.webp"
+                                    alt="img">
+                                <div class="content d-flex justify-content-center text-center flex-column">
+                                    <div class="icons">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="text-white">Michael Barley</h5>
+                                        <p class="m-0 text-white">Implant Expert</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div class="part1">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x11.png.pagespeed.ic.Q1i2nU0yLu.webp"
+                                    alt="img">
+                                <div class="content d-flex justify-content-center text-center flex-column">
+                                    <div class="icons">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="text-white">Michael Barley</h5>
+                                        <p class="m-0 text-white">Implant Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="part1">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x9.png.pagespeed.ic.A5OdBpmZhq.webp"
+                                    alt="img">
+                                <div class="content d-flex justify-content-center text-center flex-column">
+                                    <div class="icons">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="text-white">Michael Barley</h5>
+                                        <p class="m-0 text-white">Implant Expert</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div class="part1">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x10.png.pagespeed.ic.Evdko4uIO3.webp"
+                                    alt="img">
+                                <div class="content d-flex justify-content-center text-center flex-column">
+                                    <div class="icons">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="text-white">Michael Barley</h5>
+                                        <p class="m-0 text-white">Implant Expert</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div class="part1">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x11.png.pagespeed.ic.Q1i2nU0yLu.webp"
+                                    alt="img">
+                                <div class="content d-flex justify-content-center text-center flex-column">
+                                    <div class="icons">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="text-white">Michael Barley</h5>
+                                        <p class="m-0 text-white">Implant Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionbox8">
+            <div class="parallex1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-center ">
+                            <div class="blog-slider owl-carousel owl-theme">
+                                <div class="item d-flex">
+                                    <img class="rounded-circle"
+                                        src="https://preview.colorlib.com/theme/dento/img/bg-img/x8.jpg.pagespeed.ic.gI4xoMcOub.webp"
+                                        alt="img">
+                                    <div class="content ml-lg-5 ml-md-4 ml-3">
+                                        <h5 class="text-white">“I'd been avoiding the dentist for years due to bad experiences.
+                                            A reminder SMS is
+                                            sent
+                                            the working day beforehand. I also had a call confirming appointment. I have been a
+                                            patient ever since. My dentist is very reassuring and
+                                            very helpful. Excellent treatment and advice.”</h5>
+                                        <h6 class="text-white">Arron Ramsey</h6>
+                                        <p class="text-white">Dental Patient</p>
+                                    </div>
+                                </div>
+                                <div class="item d-flex">
+                                    <img class="rounded-circle"
+                                        src="https://preview.colorlib.com/theme/dento/img/bg-img/x8.jpg.pagespeed.ic.gI4xoMcOub.webp"
+                                        alt="img">
+                                    <div class="content ml-lg-5 ml-md-4 ml-3">
+                                        <h5 class="text-white">“I'd been avoiding the dentist for years due to bad experiences.
+                                            A reminder SMS is
+                                            sent
+                                            the working day beforehand. I also had a call confirming appointment. I have been a
+                                            patient ever since. My dentist is very reassuring and
+                                            very helpful. Excellent treatment and advice.”</h5>
+                                        <h6 class="text-white">Arron Ramsey</h6>
+                                        <p class="text-white">Dental Patient</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionbox9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title text-center">
+                            <h2 class="mb-4">The Latest News</h2>
+                            <div class="line m-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-12">
+                        <div class="part1">
+                            <a href="#">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x4.jpg.pagespeed.ic.LFdi6eUTGU.webp"
+                                    alt="img">
+                            </a>
+                            <div class="content">
+                                <a href="#">
+                                    <h2> How your mouth bacteria can harm your lungs</h2>
+                                </a>
+                                <p>Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo
+                                    diam ...</p>
+                                <div class="tagline">
+                                    <a href="#"><i class="fal fa-clock"></i> 28 Sep 2018</a>
+                                    <a href="#"><i class="fad fa-comments"></i> 3 Comments</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <div class="part1">
+                            <a href="#">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x5.jpg.pagespeed.ic.exvN4apzab.webp"
+                                    alt="img">
+                            </a>
+                            <div class="content">
+                                <a href="#">
+                                    <h2> How your mouth bacteria can harm your lungs</h2>
+                                </a>
+                                <p>Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo
+                                    diam ...</p>
+                                <div class="tagline">
+                                    <a href="#"><i class="fal fa-clock"></i> 28 Sep 2018</a>
+                                    <a href="#"><i class="fad fa-comments"></i> 3 Comments</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <div class="part1">
+                            <a href="#">
+                                <img src="https://preview.colorlib.com/theme/dento/img/bg-img/x6.jpg.pagespeed.ic.4MfPJk7qiG.webp"
+                                    alt="img">
+                            </a>
+                            <div class="content">
+                                <a href="#">
+                                    <h2> How your mouth bacteria can harm your lungs</h2>
+                                </a>
+                                <p>Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo
+                                    diam ...</p>
+                                <div class="tagline">
+                                    <a href="#"><i class="fal fa-clock"></i> 28 Sep 2018</a>
+                                    <a href="#"><i class="fad fa-comments"></i> 3 Comments</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="parallex1 flex-column">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="part1">
+                            <a href="#" class="d-block mb-4">
+                                <img src="data:image/webp;base64,UklGRiAFAABXRUJQVlA4TBMFAAAvl8AJEFpRkLYB0/m3fSVExAQA8h/ZkSQpkqW/MKFKCnU33b371nq/8zEzHtbDfMzME3Ndd0gMABBu0na2bdu2rZdt27Zt27Zt27Zt7xy4jaRIycLx5bjvC3AcwG0j/f8z/KRIitQLplG1l6NDpc7V5WBgACH6bhCSFIYUUkghhRRSSCGFFF4hhRRSSCEGbhspyjGnWro3eKSCKBEVrnrVifpVgPpTl2pYxSsZBbPTtC1USMrnS/VU15cUlreDCqSM1U2NVK/K+dCzi0hIa4WqmnZfG1WqrJW0olVkilXJK7df6m1xQI0oPM8tkqKJFZFaU0CpbqWgwJ0UhahM1HpV1RdF5ZlFKkxFkMJUO6W2lMTws6cs1GNVqYtvnlfExwlEO1QDpQoVwgpBilhNVZVaU4ieVYTBGVS28lKAClgtScGq5qpSmZ5VjMJBKwr1qWJWbXql+nYWxe05RVb8RUmrQtX5duUqha6Oqj56TrET987+Ubd/bBtxUBkVkGCRglDIjWoogpAmS4lXlWL1jCIvAuhn5aI8bBud8SMJrmEyOqIvNuETAgkuI3ETpqqrVNw4VkremSTFXRt/kgYgTFLG8ZokRXGSAT8AEr1IyI7TSGJJkMeqVsHbPp+RONSEKeYqtbsWpNxMwqMJw/N4UDsIj6/4fvuVCrNtrBgSpPRSNaiAUgTrQQqScOQRerAmjicq5YYVg+K0bVwdg6peqmyrlPRKfCqD8abmio2dLBRxsUZOAdrlMgGMBzNjTLDGin8xFeDWGNRpcq9XKXN3DCQXI8mZRPYmyaVUQiVka9IO7A9mePlDgq1jUKj9HVRvpRzd00/uzEsSXnKcxVsVpTP/Ak9yoelAu+GKzwjbFqqVdUG5uCd4W9Q9CZTucGXLxRO/g4XtrzP+DOj02Gp45SP+pic4dnVPhoVcbjxZpdcTbGw7sG7En06g6i8l475Ocr806o+9OalVjVg+49xU+lYAT6XCJbjcdqD8YO3k2GqhFAEibhbVoB5CVKxrMfA1e4jQdNyuPhjYC1RXatfItWFuflUNa7vCzeR6G4IzfVC9N/0p4K5Rb6Mnm4jcM6fpnlbVrWNzglltyLkk+IceSIOCOJUk+50+pVWK2Rh6Aq6WRN8zWj1WCvVE7wTvEaELZtpGHPwcoOpVp5EVA9b+3vxFFqi/gUy/yXq/iXxJ0LILKto2DvdROOpLcRmLUMgd/eROnJkHDwlw+ONM13YIwvMET/8vU7A3CTLaNhYmQVk3qniV4j08R4g71pLPC1WyBnwuZNNx2RiRBIOXXViVBNlakLOJVRRqWsEbezB63TnmCNp81lLvIews7QjbxUiEv8ke8iyyMDwJcts2NiRB1GWqglLVitQX9pBizblvRxZbM8IE//tsTE+CR4hn26iRBCWbNzgeNqHKRlH5DX5iRu+UQPIxgVZAECX6n2zExsckOLtvG6najxlOJVizjFLcCtfIiDf4gDieU9RKElzaPfg9QRnbxr6k+QJXIP//GtT1rGJuklz8aaNTggS2jUn5iihNExrie7DA8/7Rx54kwT9MfP0EA9BhEYJkmIkCXgZgY/Ljo+cVEbA3SYK36IVYgxykwCT8SLD/nWf2I+YkSYJfWHftsBlqkA0dcAD/k2AxwnhyUR/v04hPuIzdz3EIN/Fz2YDGnl/Ewyz8zdA9LEB8bwWRAuOe9Q/hDSYgpbeGT1AYg7AV9/4m+IFb2HYOxRDiqQUA"
+                                    alt="logo">
+                            </a>
+                            <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis
+                                kansa interdum dignissim.</p>
+                            <div class="contact">
+                                <p><i class="fas fa-map-marker-alt"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
+                                <p><i class="fas fa-phone-alt"></i> +84. 2252. 2250. 122</p>
+                                <p><i class="fas fa-envelope"></i> info.dento@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-6 col-12">
+                        <div class="part2">
+                            <div class="title">
+                                <h5>Opening Hours</h5>
+                            </div>
+                            <ul class="hours">
+                                <li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
+                                <li><span>Thu-Fri</span> <span>8.00-17.00</span></li>
+                                <li><span>Sat</span> <span>9.00-17.00</span></li>
+                                <li><span>Sun</span> <span>10.00-17.00</span></li>
+                                <li><span>Holiday</span> <span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-6 col-12">
+                        <div class="part3">
+                            <div class="title">
+                                <h5>Quick Link</h5>
+                            </div>
+                            <nav>
+                                <ul class="links d-flex flex-wrap">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Advisors</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Dentist</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Legals</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-6 col-12">
+                        <div class="part4">
+                            <div class="title">
+                                <h5>Newsletter</h5>
+                            </div>
+                            <p>We will send out weekly newest article and some great offers</p>
+                            <form action="#" class="my-4">
+                                <input type="email" placeholder="Email Address">
+                                <button type="submit"><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                            <div class="icons">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i
+                                        class="fab fa-google-plus-g"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
+                                        class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footerbox">
+                            <p>
+                                Copyright © 2022 All rights reserved |
+                                This template is made with <i class="fal fa-heart"></i> by RAJAN
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
